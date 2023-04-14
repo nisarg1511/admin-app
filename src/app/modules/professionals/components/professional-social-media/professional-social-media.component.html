@@ -1,0 +1,21 @@
+<div class="card mt-3 border-0 shadow " >
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap" *ngIf="professional.linkedIn">
+            <h6 class="mb-0"><i class="fab fa-linkedin me-2 fa-lg" style="color: #000000;"></i>LinkedIn</h6>
+            <span class="text-secondary">{{professional.linkedIn}}</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap" *ngIf="professional.instagram">
+            <h6 class="mb-0"><i class="fab fa-instagram me-2 fa-lg"></i>Instagram</h6>
+            <span class="text-secondary">{{professional.instagram}}</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap" *ngIf="professional.facebook">
+            <h6 class="mb-0"><i class="fab fa-facebook fa-lg me-2"></i>Facebook</h6>
+            <span class="text-secondary">{{professional.facebook}}</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap" *ngIf="professional.whatsapp">
+            <h6 class="mb-0"><i class="fab fa-whatsapp fa-lg me-2"></i>Whatsapp</h6>
+
+            <span class="text-secondary">{{professional.whatsapp}}</span>
+        </li>
+    </ul>
+</div>

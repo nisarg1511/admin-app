@@ -1,0 +1,39 @@
+<div class="d-flex flex-column auth-form p-4 p-lg-2 shadow-none" >
+  <h3 class="fs-4 text-center" >Login</h3>   
+    
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <label class="fs-9 fw-500 text__gray">Email Address</label>
+    <input 
+    [class.border-danger]="!email.valid && email.touched"
+      class="form-control fs-8 mt-1 rounded-0 auth-input"
+      required 
+      ngModel
+      email
+      name="email"
+      #email="ngModel"/>
+    <div *ngIf="!email.valid && email.touched" class="text-danger fs-8 mt-1">
+      Please enter your email id
+    </div>
+  
+    <!-- Password -->
+    <label class="fs-9 fw-500 text__gray mt-2">Password</label>
+    <div class="input-group">
+      <input #passwordInput [type]="showPassword ? 'text' : 'password'"
+      [class.border-danger]="!password.valid && password.touched"
+        class="form-control fs-8 mt-1 rounded-0  auth-input" 
+        aria-describedby="UserPassword" name="password" 
+        ngModel
+        required
+        #password="ngModel"
+        name="password"/>
+    </div>
+    <div *ngIf="!password.valid && password.touched" class="text-danger fs-8 mt-1">
+      Please enter your password
+    </div>
+    <div class="text-danger fs-8 mt-1" *ngIf="showCredentialsError">Invalid login credentials</div>
+    <button 
+    [disabled]="!f.valid"
+    class="btn bg-main-blue w-100 mt-4 text-light  fs-7" type="submit">
+      Login
+    </button>
+  </form>

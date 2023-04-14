@@ -1,0 +1,40 @@
+<div class="sticky-top">
+  <header class="py-3  border-bottom text-light bg-dark">
+    <div class="container d-flex flex-wrap justify-content-center">
+      <span class="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto text-light text-decoration-none">
+        <span class="fs-4">Heavenly Homes<sub class="fs-8">admin</sub></span>
+      </span>
+      <span class="d-lg-flex d-none  text-light">
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+          <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+        </svg>      
+        <span class="fs-5 ms-1">{{user.displayName}}</span>
+      </span>
+      <div class="col-12 col-lg-auto  mb-lg-0" role="search"></div>
+    </div>
+  </header>
+  <nav class="navbar  navbar-expand-lg navbar-light bg-body shadow"  >
+    <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <div class="container">
+              <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <ul class="navbar-nav me-auto align-center mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" routerLink="/dashboard" routerLinkActive="active" >Dashboard</a>
+              </li>
+              <li class="nav-item" >
+                <a class="nav-link " routerLink="/professionals/category"  routerLinkActive="active">Professionals</a>
+              </li>
+              <li class="nav-item" >
+                <a class="nav-link " routerLink="/auth/login"  routerLinkActive="active">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>   
+</div>

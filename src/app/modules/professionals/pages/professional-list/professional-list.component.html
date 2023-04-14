@@ -1,0 +1,44 @@
+<!-- <div class="row">
+  <div class="col-12 col-sm-4 col-lg-3" *ngFor="let professional of professionals">
+    <div class="card shadow rounded-0 border-0 mb-4" (click)="onSelectProfessional(professional.id)">
+      <img src="{{professional.images.at(0)}}" class="card-img-top rounded-0" alt="..." *ngIf="professional.images">
+      <div class="card-body">
+        <h5 class="card-title fs-6">{{professional.company_name}}</h5>
+        <p><i class="fas fa-user-tie fs-7 ms-1 me-2"></i>{{professional.profession}}</p>
+        <p><i class="fas fa-tty fs-7 ms-1 me-2 text-success"></i>+91{{professional.phone_number}}</p>
+        <p><i class="fas fa-phone-alt ms-1 me-2 text-success fs-7"></i>+91{{professional.mobile_number}}</p>
+        <p><i class="fa fa-map-marker-alt ms-1 text-success me-2 fs-7"></i>{{professional.address.city}},Gujarat</p>
+      </div>
+    </div>    
+  </div>
+</div> -->
+    
+<div class="row">
+  <h5 class="fs-5 text-center">{{professionals.length}} {{profession}}/s in total</h5>
+  <div class="col-md-8 offset-md-2" *ngFor="let professional of professionals">
+    <div class="blog-card bg-white mb-4 overflow-hidden d-lg-flex rounded-lg position-relative">
+      <!-- <div class="blog-image overflow-hidden d-flex align-items-center" *ngIf="professional.images">
+        <img src="{{professional.images.at(0)}}" alt="" class="blog-thumbnail" >
+
+      </div> -->
+      <div class="p-4 blog-container">
+        <h4 class="mt-2 font-weight-bold">
+          <p class="text-dark">{{professional.company_name}}</p>
+        </h4>
+        <span class="text-muted">{{professional.company_description}}</span>
+        <div class="blog-footer d-flex justify-content-between align-items-center border-top">
+          <div>
+            <a><img src="assets/avtars/avtar1.png" alt="" class="blog-author shadow" *ngIf="!professional.profile_picture"></a>
+            <a><img src="{{professional.profile_picture}}" alt="" class="blog-author shadow" *ngIf="professional.profile_picture"></a>
+
+            <a  class="text-dark">{{professional.user_name}}</a>
+          </div>
+          <div>
+            <button class="btn btn-primary fs-7 me-2" (click)="onSelectProfessional(professional.id)">Preview</button>
+            <button class="btn btn-danger fs-7" (click)="deleteProfessional(professional.id)"><i class="fas fa-trash-alt fs-7" ></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

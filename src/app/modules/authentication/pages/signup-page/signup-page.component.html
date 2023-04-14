@@ -1,0 +1,42 @@
+<div class="d-flex flex-column auth-form p-4 p-lg-2 rounded-1" >
+    <form [formGroup]="adminRegistration" (ngSubmit)="onSubmit()" >
+      <div>
+        <h3 class="fs-5  text-center bold">Sign Up</h3>
+        <!--UserName-->
+        <label class="fs-9 fw-500 text__gray">User name</label>
+        <input type="text" 
+        [class.border-danger] = "!adminRegistration.get('user_name').valid && adminRegistration.get('user_name').touched"
+        formControlName="user_name"
+        class="form-control fs-8 mt-1 rounded-0 auth-input"
+        required>
+        <div *ngIf="!adminRegistration.get('user_name').valid &&adminRegistration.get('user_name').touched" class="text-danger fs-8 mt-1">
+          Please enter a User name.
+        </div>
+        <!--email-->
+        <label class="fs-9 fw-500 text__gray">Email</label>
+        <input type="email" 
+        [class.border-danger] = "!adminRegistration.get('email').valid && adminRegistration.get('email').touched"
+        formControlName="email"
+        class="form-control fs-8 mt-1 rounded-0 auth-input"
+        required>
+        <div *ngIf="!adminRegistration.get('email').valid &&adminRegistration.get('email').touched" class="text-danger fs-8 mt-1">
+          Please enter a valid email.
+        </div>
+        <!--password-->
+        <label class="fs-9 fw-500 text__gray">Password</label>
+        <input type="password" 
+        [class.border-danger] = "!adminRegistration.get('password').valid && adminRegistration.get('password').touched"
+        formControlName="password"
+        minlength="6"
+        class="form-control fs-8 mt-1 rounded-0 auth-input"
+        required>
+        <div *ngIf="!adminRegistration.get('password').valid &&adminRegistration.get('password').touched" class="text-danger fs-8 mt-1">
+          Password must be atleast six characters long.
+        </div>
+        
+        <button 
+        [disabled]="!adminRegistration.valid"
+        class="btn bg-main-blue w-100 mt-4 text-light  fs-7" type="submit">Register</button>
+      </div>
+    </form>
+</div>

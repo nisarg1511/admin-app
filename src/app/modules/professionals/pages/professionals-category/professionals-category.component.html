@@ -1,0 +1,23 @@
+<div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+    <h1 class="mb-3">Professional Categories</h1>
+    <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+</div>
+<div class="row g-4">
+    <div class="col-lg-3 col-md-6 col-sm-6 col" data-wow-delay="0.1s" *ngFor="let profession of professionList">
+        <div (click)="onSelectProfessional(profession)" class="card border-0 d-block bg-white shadow text-center rounded p-3">
+            <div class="rounded p-4">
+                <div class="icon mb-3">
+                    <i class="fas fa-pencil-ruler fs-1" *ngIf="profession == 'Architect'"></i>   
+                    <i class="fas fa-couch fs-1" *ngIf="profession == 'Interior designer'"></i> 
+                    <i class="fa fa-bath fs-1" *ngIf="profession == 'Sanitary-Hardware Provider'"></i> 
+                    <i class="fas fa-hard-hat fs-1" *ngIf="profession == 'Contractor'"></i>  
+                    <i class="fas fa-plug fs-1" *ngIf="profession == 'Electrician'"></i>
+                    <i class="fas fa-tools fs-1" *ngIf="profession == 'Carpanter'"></i>
+                    <i class="fas fa-paint-roller fs-1" *ngIf="profession == 'Painter'"></i>
+                    <i class="fas fa-user fs-1" *ngIf="profession == 'Agent'"></i>
+                </div>
+                <h6>{{profession}}</h6>
+            </div>
+        </div>
+    </div>
+</div>
